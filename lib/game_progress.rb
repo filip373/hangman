@@ -35,4 +35,8 @@ class GameProgress
     @word_progress
   end
 
+  def word
+    @the_word
+  end
+
 end

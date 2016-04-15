@@ -1,8 +1,7 @@
 class GameDisplay
 
-  def initialize(placeholder, the_word)
+  def initialize(placeholder)
     @placeholder = placeholder
-    @the_word = the_word
   end
 
   def guess_res(result)
@@ -10,7 +9,7 @@ class GameDisplay
   end
 
   def prompt_letter(try_num)
-    puts "#{try_num} tries left, specify a letter: "
+    puts "#{try_num} tries left, specify a letter or ! to save: "
   end
 
   def progress(progress_arr)
@@ -18,14 +17,14 @@ class GameDisplay
     puts progress_arr.map { |p| p.nil? ? @placeholder : p }.join
   end
 
-  def start_game(progress_arr)
+  def start_game(progress_arr, word_size)
     progress(progress_arr)
-    puts "Size: #{@the_word.size}"
+    puts "Size: #{word_size}"
   end
 
-  def end_game(result)
+  def end_game(result, word)
     puts result ? 'You won!' : 'You lost!'
-    puts "The word was: #{@the_word}"
+    puts "The word was: #{word}"
   end
 
 end

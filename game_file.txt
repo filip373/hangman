@@ -1,0 +1,21 @@
+--- !ruby/object:GameProgress
+the_word: !ruby/object:TheWord
+  word: platitude
+tries_left: 9
+specified:
+- z
+- s
+- a
+- u
+- i
+- o
+word_progress:
+- 
+- 
+- a
+- 
+- i
+- 
+- u
+- 
+- 
